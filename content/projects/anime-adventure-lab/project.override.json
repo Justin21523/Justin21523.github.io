@@ -1,18 +1,15 @@
 {
   "visibility": "public",
-  "featured": false,
+  "featured": true,
   "category": "ai-data",
   "status": "prototype",
   "year": 2026,
   "technologies": [
     "FastAPI",
     "Celery + Redis",
-    "PyTorch",
-    "Transformers",
-    "PEFT / LoRA",
-    "sentence-transformers (bge-m3)",
-    "FAISS",
-    "Diffusers (SD/SDXL)",
+    "PostgreSQL + pgvector",
+    "MinIO",
+    "SQLAlchemy + Alembic",
     "React 19 + Vite",
     "Gradio"
   ],
@@ -20,16 +17,24 @@
   "links": [
     {
       "kind": "live",
-      "url": "https://justin21523.github.io/anime-adventure-lab/",
+      "url": "https://neojustin.dothost.net/p/anime-adventure-lab/app/",
       "label": {
-        "zh-TW": "網站 Demo",
-        "en": "Live Demo"
+        "zh-TW": "完整 Workbench",
+        "en": "Full Workbench"
       },
       "primary": true
     },
     {
+      "kind": "live",
+      "url": "https://justin21523.github.io/anime-adventure-lab/",
+      "label": {
+        "zh-TW": "驗證案例頁",
+        "en": "Verified Case Study"
+      }
+    },
+    {
       "kind": "video",
-      "url": "/portfolio/projects/anime-adventure-lab/demo/demo-recording.mp4",
+      "url": "https://justin21523.github.io/anime-adventure-lab/assets/demo-recording.mp4",
       "label": {
         "zh-TW": "Demo 錄影",
         "en": "Demo Recording"
@@ -56,26 +61,26 @@
     {
       "id": "demo-recording",
       "type": "video",
-      "src": "/portfolio/projects/anime-adventure-lab/demo/demo-recording.mp4",
-      "poster": "/portfolio/projects/anime-adventure-lab/demo/demo-video-poster.svg",
+      "src": "https://justin21523.github.io/anime-adventure-lab/assets/demo-recording.mp4",
+      "poster": "https://justin21523.github.io/anime-adventure-lab/assets/screenshot-story.png",
       "alt": {
-        "zh-TW": "Anime Adventure Lab 的 18 秒作品集 demo 錄影，展示 Story、RAG、Agent 與 T2I 展示流程。",
-        "en": "An 18-second portfolio demo recording for Anime Adventure Lab showing Story, RAG, Agent, and T2I showcase flows."
+        "zh-TW": "SagaForge 的實際 Workbench 錄影，展示持久化 Story、RAG 引用、工作狀態與人工審核。",
+        "en": "A real SagaForge workbench recording covering persistent Story, RAG citations, durable jobs, and human review."
       },
       "title": {
         "zh-TW": "作品集 Demo 錄影",
         "en": "Portfolio Demo Recording"
       },
       "caption": {
-        "zh-TW": "可直接在作品頁播放的公開展示影片，說明穩定 mock demo 如何呈現故事引擎、RAG 檢索、Agent 決策與文生圖 hooks。",
-        "en": "A public recording embedded in the project page, showing how the stable mock demo presents the story engine, RAG retrieval, agent decisions, and text-to-image hooks."
+        "zh-TW": "影片由 deterministic Compose 環境錄製，對應可重現的 API、worker、RAG 與 review 流程。",
+        "en": "Recorded from the deterministic Compose profile and backed by reproducible API, worker, RAG, and review evidence."
       },
       "featured": true
     },
     {
       "id": "story-showcase",
       "type": "image",
-      "src": "/portfolio/projects/anime-adventure-lab/screenshots/story-showcase.svg",
+      "src": "https://justin21523.github.io/anime-adventure-lab/assets/screenshot-story.png",
       "alt": {
         "zh-TW": "Anime Adventure Lab 的故事回合展示截圖，包含情境選擇、視覺小說舞台、對話與 pipeline 指標。",
         "en": "Story turn showcase screenshot with scenario controls, visual novel stage, dialogue, and pipeline metrics."
@@ -85,17 +90,17 @@
         "en": "Story-first Interactive Showcase"
       },
       "caption": {
-        "zh-TW": "用可截圖的方式呈現玩家輸入、世界狀態、對話輸出、mock latency 與 traceable state delta。",
-        "en": "A screenshot-ready view of player input, world state, dialogue output, mock latency, and traceable state delta."
+        "zh-TW": "呈現玩家輸入、持久化世界狀態、對話輸出、citation 與 traceable state delta。",
+        "en": "Shows player input, persisted world state, narrative output, citations, and a traceable state delta."
       }
     },
     {
       "id": "rag-retrieval",
       "type": "image",
-      "src": "/portfolio/projects/anime-adventure-lab/screenshots/rag-retrieval.svg",
+      "src": "https://justin21523.github.io/anime-adventure-lab/assets/screenshot-rag.png",
       "alt": {
-        "zh-TW": "RAG 世界觀檢索展示截圖，包含 query、rerank 狀態、文件引用與分數。",
-        "en": "RAG world-lore retrieval screenshot with query, rerank state, document citations, and scores."
+        "zh-TW": "RAG 世界觀檢索證據，包含來源文件、chunk、excerpt 與分數。",
+        "en": "RAG world-lore evidence with source document, chunk, excerpt, and score."
       },
       "title": {
         "zh-TW": "World-scoped RAG 檢索",
@@ -107,26 +112,26 @@
       }
     },
     {
-      "id": "agent-choice",
+      "id": "job-lifecycle",
       "type": "image",
-      "src": "/portfolio/projects/anime-adventure-lab/screenshots/agent-choice.svg",
+      "src": "https://justin21523.github.io/anime-adventure-lab/assets/screenshot-job-running.png",
       "alt": {
-        "zh-TW": "Agent 輔助選擇展示截圖，包含工具計畫、推薦路徑、風險理由與 review queue。",
-        "en": "Agent-assisted choice screenshot with tool plan, recommended path, risk rationale, and review queue."
+        "zh-TW": "Durable Job 執行狀態，包含 request ID、execution ID、progress 與 attempt。",
+        "en": "Durable Job execution with request ID, execution ID, progress, and attempt count."
       },
       "title": {
-        "zh-TW": "Agent 輔助決策流程",
-        "en": "Agent-assisted Decision Flow"
+        "zh-TW": "可觀測 Job Lifecycle",
+        "en": "Observable Job Lifecycle"
       },
       "caption": {
-        "zh-TW": "說明 Agent 如何根據 relationship state、world state 與 risk estimator 提供可審核的建議。",
-        "en": "Explains how the agent uses relationship state, world state, and a risk estimator to produce reviewable recommendations."
+        "zh-TW": "API、worker、scheduler 與 admin 共同寫入持久化事件鏈，支援 retry 與 lease recovery。",
+        "en": "API, worker, scheduler, and admin actors write a persistent event chain supporting retry and lease recovery."
       }
     }
   ],
   "metadata": {
     "updatedAt": "2026-06-28",
-    "version": "1.0.0-demo",
+    "version": "2.0.0-verified",
     "projectType": "RAG + LLM story-driven game world generation service stack",
     "domains": [
       "Generative AI",
@@ -139,10 +144,10 @@
       "Generate branching narrative and choices",
       "Retrieve and cite grounded world lore",
       "Manage persistent game state and memory",
-      "Generate scene images via diffusion pipelines",
-      "Fine-tune and hot-swap LoRA adapters",
       "Orchestrate long-running jobs asynchronously",
-      "Present a mock-safe public portfolio demo with screenshots and video"
+      "Persist a sanitized job lifecycle audit trail",
+      "Require optimistic-lock human approval for AI-proposed world changes",
+      "Publish generated verification evidence without fallback metrics"
     ],
     "frameworks": [
       "FastAPI",
@@ -197,7 +202,7 @@
       "Screenshot gallery",
       "Demo recording",
       "Technical case study",
-      "Mock-safe AI product walkthrough"
+      "Deterministic verified AI product walkthrough"
     ],
     "audiences": [
       "Interviewers",
